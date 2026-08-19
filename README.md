@@ -41,15 +41,11 @@ src/statebench/                    runner, providers, strategies, evaluator
 results/final/processed/           final aggregate CSVs
 results/final/figures/             report-ready plots
 report/StateBench_Report.docx      four-page mini-paper
-video/                             three-minute deck, slide images, and script
+video/                             three-minute deck and slide previews
 docs/METHODOLOGY.md                reproduction and extension protocol
 docs/RESULTS.md                    detailed result interpretation
 REPRODUCTION.md                    exact commands and provenance
 ```
-
-Local plans, superseded configurations, exploratory outputs, and the incomplete
-reasoning-budget probe are preserved in gitignored `local_notes/`; they are not
-part of the public reproduction surface.
 
 ## Setup
 
@@ -80,12 +76,15 @@ limits are retried inside the active trial; a quota stop is safe to resume.
 ```powershell
 python -m statebench run --config configs/final.yaml --resume
 python -m statebench analyze --config configs/final.yaml
-python scripts/build_report.py
 ```
 
 Raw model traces are intentionally gitignored because they are large and may
 contain provider-specific metadata. The processed CSVs and figures needed to
-audit the published numbers are tracked under `results/final/`.
+audit the published numbers are tracked under `results/final/`. The finalized
+four-page report is included directly under `report/`.
+
+To package only version-controlled reproduction files after committing the
+final revision, run `git archive --format=zip --output StateBench.zip HEAD`.
 
 ## Validate
 

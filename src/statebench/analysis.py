@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 
 
@@ -18,7 +19,7 @@ STRATEGY_LABELS = {
     "full_history": "Full history",
     "paper_restatement": "Paper restatement",
     "json_state": "JSON state",
-    "dependency_pruning": "Dependency pruning",
+    "dependency_pruning": "Static dependency pruning",
     "live_dependency_pruning": "Live dependency pruning",
 }
 CONFIG_ORDER = ["easy_depth", "deep_depth", "connected_distractors", "live_pressure"]
@@ -158,27 +159,42 @@ def _plots(figures: Path, summary: pd.DataFrame, by_config: pd.DataFrame, failur
         .dropna(how="all")
         .rename(index=CONFIG_LABELS, columns=STRATEGY_LABELS)
     )
-    figure, axis = plt.subplots(figsize=(9.1 if len(available_strategies) > 4 else 8.2, 4.35))
-    pivot.plot(kind="bar", ax=axis, color=[COLORS[item] for item in available_strategies], width=0.78)
+    # An annotated heatmap keeps the complete condition-by-strategy comparison
+    # while avoiding a second set of grouped bars in the report.
+    heatmap = pivot.transpose()
+    values = heatmap.to_numpy(dtype=float)
+    figure, axis = plt.subplots(figsize=(8.9, 4.35))
+    image = axis.imshow(values, cmap="Blues", vmin=0.5, vmax=1.0, aspect="auto")
     axis.set(
         xlabel="Task configuration",
-        ylabel="Exact success rate",
-        ylim=(0, 1.14),
-        title="Reliability by task configuration",
+        ylabel="Working-state strategy",
+        title="Exact success across paired task configurations",
     )
-    axis.set_xticklabels(pivot.index, rotation=0, ha="center")
-    axis.legend(
-        title=None,
-        loc="upper center",
-        bbox_to_anchor=(0.5, 1.02),
-        ncol=len(available_strategies),
-        fontsize=8,
-        frameon=False,
-    )
-    axis.grid(axis="y", alpha=0.18)
-    for container in axis.containers:
-        labels = [f"{int(round(bar.get_height() * 5))}/5" for bar in container]
-        axis.bar_label(container, labels=labels, padding=2, fontsize=8)
+    axis.set_xticks(np.arange(len(heatmap.columns)), labels=heatmap.columns)
+    axis.set_yticks(np.arange(len(heatmap.index)), labels=heatmap.index)
+    axis.tick_params(axis="x", rotation=0)
+    for row_index in range(values.shape[0]):
+        for column_index in range(values.shape[1]):
+            value = values[row_index, column_index]
+            axis.text(
+                column_index,
+                row_index,
+                f"{int(round(value * 5))}/5",
+                ha="center",
+                va="center",
+                fontsize=10,
+                fontweight="bold",
+                color="white" if value >= 0.82 else "#17324D",
+            )
+    colorbar = figure.colorbar(image, ax=axis, fraction=0.035, pad=0.025)
+    colorbar.set_label("Exact success rate")
+    colorbar.set_ticks([0.6, 0.8, 1.0], labels=["60%", "80%", "100%"])
+    axis.set_xticks(np.arange(-0.5, len(heatmap.columns), 1), minor=True)
+    axis.set_yticks(np.arange(-0.5, len(heatmap.index), 1), minor=True)
+    axis.grid(which="minor", color="white", linewidth=2)
+    axis.tick_params(which="minor", bottom=False, left=False)
+    for spine in axis.spines.values():
+        spine.set_visible(False)
     figure.tight_layout(pad=0.8)
     figure.savefig(figures / "reliability_by_configuration.png", dpi=180)
     plt.close(figure)
@@ -288,34 +304,122 @@ def _plots(figures: Path, summary: pd.DataFrame, by_config: pd.DataFrame, failur
             .dropna(how="all")
             .rename(index=CONFIG_LABELS, columns=STRATEGY_LABELS)
         )
-        figure, axes = plt.subplots(1, 2, figsize=(10.4, 3.55), gridspec_kw={"wspace": 0.28})
+        figure, axes = plt.subplots(1, 2, figsize=(10.4, 3.9), gridspec_kw={"wspace": 0.34})
         colors = [COLORS[item] for item in comparison]
-        reliability.plot(kind="bar", ax=axes[0], color=colors, width=0.76)
+        markers = ["o", "s", "D"]
+        config_x = np.arange(len(reliability.index), dtype=float)
+        x_offsets = [-0.035, 0.0, 0.035]
+        for strategy_index, (strategy, color, marker) in enumerate(zip(comparison, colors, markers)):
+            label = STRATEGY_LABELS[strategy]
+            values = reliability[label].to_numpy(dtype=float)
+            plotted_x = config_x + x_offsets[strategy_index]
+            axes[0].plot(
+                plotted_x,
+                values,
+                color=color,
+                marker=marker,
+                markersize=6,
+                linewidth=2,
+                label=label,
+            )
+        for config_index, condition in enumerate(reliability.index):
+            condition_values = reliability.loc[condition]
+            live_rate = float(condition_values[STRATEGY_LABELS["live_dependency_pruning"]])
+            baseline_rate = float(condition_values[STRATEGY_LABELS["json_state"]])
+            if condition_values.nunique() == 1:
+                axes[0].annotate(
+                    f"All {int(round(baseline_rate * 5))}/5",
+                    (config_x[config_index], baseline_rate),
+                    xytext=(0, 10),
+                    textcoords="offset points",
+                    ha="center",
+                    fontsize=8.5,
+                    fontweight="bold",
+                    color="#40536A",
+                )
+            else:
+                axes[0].annotate(
+                    f"JSON + static {int(round(baseline_rate * 5))}/5",
+                    (config_x[config_index], baseline_rate),
+                    xytext=(0, 10),
+                    textcoords="offset points",
+                    ha="center",
+                    fontsize=8,
+                    color="#40536A",
+                )
+                axes[0].annotate(
+                    f"Live {int(round(live_rate * 5))}/5",
+                    (config_x[config_index], live_rate),
+                    xytext=(0, 8),
+                    textcoords="offset points",
+                    ha="center",
+                    fontsize=8,
+                    fontweight="bold",
+                    color=COLORS["live_dependency_pruning"],
+                )
         axes[0].set(
-            title="A. Reliability retained",
+            title="A. Reliability across difficulty",
             xlabel="Task configuration",
             ylabel="Exact success rate",
-            ylim=(0, 1.12),
+            ylim=(0.52, 1.08),
         )
-        axes[0].set_xticklabels(reliability.index, rotation=0)
+        axes[0].set_xticks(config_x, labels=reliability.index)
+        axes[0].set_yticks([0.6, 0.8, 1.0])
         axes[0].grid(axis="y", alpha=0.18)
-        for container in axes[0].containers:
-            axes[0].bar_label(container, fmt="%.2f", padding=1, fontsize=7)
-        state_size.plot(kind="bar", ax=axes[1], color=colors, width=0.76)
+
+        config_y = np.arange(len(state_size.index))[::-1]
+        y_offsets = [-0.07, 0.07, 0.0]
+        for row_index, (condition, y) in enumerate(zip(state_size.index, config_y)):
+            row = state_size.loc[condition]
+            live_value = float(row[STRATEGY_LABELS["live_dependency_pruning"]])
+            baseline_value = float(row[STRATEGY_LABELS["json_state"]])
+            axes[1].hlines(y, live_value, baseline_value, color="#C9CED6", linewidth=4, zorder=1)
+            for strategy_index, (strategy, color, marker) in enumerate(zip(comparison, colors, markers)):
+                label = STRATEGY_LABELS[strategy]
+                value = float(row[label])
+                axes[1].scatter(
+                    value,
+                    y + y_offsets[strategy_index],
+                    s=46,
+                    color=color,
+                    marker=marker,
+                    zorder=3,
+                )
+            axes[1].annotate(
+                f"{live_value:.0f} B",
+                (live_value, y),
+                xytext=(-4, -15),
+                textcoords="offset points",
+                ha="right",
+                fontsize=8,
+                color=COLORS["live_dependency_pruning"],
+            )
+            axes[1].annotate(
+                f"{baseline_value:.0f} B\nJSON = static",
+                (baseline_value, y),
+                xytext=(5, -7),
+                textcoords="offset points",
+                ha="left",
+                va="center",
+                fontsize=8,
+                color="#4A5563",
+            )
         axes[1].set(
-            title="B. Added-state compression",
-            xlabel="Task configuration",
-            ylabel="Cumulative state bytes per trial",
+            title="B. Live-pruning state reduction",
+            xlabel="Cumulative state bytes per trial",
         )
-        axes[1].set_xticklabels(state_size.index, rotation=0)
-        axes[1].grid(axis="y", alpha=0.18)
-        for container in axes[1].containers:
-            axes[1].bar_label(container, fmt="%.0f", padding=1, fontsize=7)
-        for axis in axes:
-            if axis.get_legend() is not None:
-                axis.get_legend().remove()
+        compact_condition_labels = [
+            "Connected\ndistractors" if item == "Connected distractors" else item
+            for item in state_size.index
+        ]
+        axes[1].set_yticks(config_y, labels=compact_condition_labels)
+        axes[1].set_xlim(0, max(660, float(state_size.max().max()) * 1.25))
+        axes[1].set_ylim(-0.35, len(config_y) - 0.65)
+        axes[1].grid(axis="x", alpha=0.18)
+        if axes[0].get_legend() is not None:
+            axes[0].get_legend().remove()
         handles, labels = axes[0].get_legend_handles_labels()
-        figure.legend(handles, labels, loc="upper center", ncol=len(comparison), frameon=False, fontsize=8)
-        figure.subplots_adjust(left=0.08, right=0.99, bottom=0.17, top=0.82, wspace=0.28)
+        figure.legend(handles, labels, loc="upper center", ncol=len(comparison), frameon=False, fontsize=9)
+        figure.subplots_adjust(left=0.08, right=0.98, bottom=0.18, top=0.80, wspace=0.34)
         figure.savefig(figures / "live_pruning_comparison.png", dpi=200)
         plt.close(figure)

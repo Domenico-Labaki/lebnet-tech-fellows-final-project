@@ -30,9 +30,11 @@ python -m statebench doctor --config configs/final.yaml
 python -m statebench preflight --config configs/final.yaml
 python -m statebench run --config configs/final.yaml --resume
 python -m statebench analyze --config configs/final.yaml
-python scripts/build_report.py
 python -m pytest -q
 ```
+
+The analysis command regenerates the processed CSVs and figures. The finalized
+submission report is included under `report/`.
 
 `--resume` skips valid completed records. Short rate-limit windows are retried
 without discarding the active conversation, and daily quota exhaustion exits
