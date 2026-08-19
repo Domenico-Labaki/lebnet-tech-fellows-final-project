@@ -1,0 +1,14 @@
+strategy,failure_code,count
+dependency_pruning,none,12
+dependency_pruning,value_not_yet_known,3
+full_history,none,10
+full_history,thinking_output_budget_exhausted,3
+full_history,value_not_yet_known,4
+json_state,none,11
+json_state,value_not_yet_known,4
+live_dependency_pruning,none,12
+live_dependency_pruning,thinking_output_budget_exhausted,2
+live_dependency_pruning,value_not_yet_known,2
+paper_restatement,none,12
+paper_restatement,thinking_output_budget_exhausted,2
+paper_restatement,value_not_yet_known,3

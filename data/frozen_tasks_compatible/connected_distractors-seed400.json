@@ -1,0 +1,599 @@
+{
+  "all_values": {
+    "agobmc": 140,
+    "cxo": 661,
+    "dicz": 644,
+    "ehfyzl": 875,
+    "fdyji": 431,
+    "fejg": 303,
+    "fpg": 576,
+    "fxs": 644,
+    "fzp": 431,
+    "ggv": 994,
+    "hlu": 890,
+    "lgy": 753,
+    "ohasj": 875,
+    "ome": 396,
+    "pfawh": 298,
+    "pjetu": 628,
+    "qcqhdb": 875,
+    "qqmpgi": 431,
+    "qqzg": 875,
+    "toiapj": 396,
+    "ufb": 303,
+    "ufrur": 396,
+    "uwziov": 644,
+    "vkrqws": 972,
+    "vqv": 196,
+    "vqvbes": 860,
+    "wfslj": 396,
+    "xabdc": 303,
+    "xotlme": 890,
+    "xuryf": 972,
+    "xzvitm": 890,
+    "zfnzt": 396
+  },
+  "call_budget": 10,
+  "config_id": "connected_distractors",
+  "edges": [
+    [
+      "func_soe",
+      "func_mvo"
+    ],
+    [
+      "func_soe",
+      "func_xdi"
+    ],
+    [
+      "func_mvo",
+      "func_xdi"
+    ],
+    [
+      "func_mvo",
+      "func_smm"
+    ],
+    [
+      "func_mvo",
+      "func_gak"
+    ],
+    [
+      "func_xdi",
+      "func_qew"
+    ],
+    [
+      "func_xdi",
+      "func_sse"
+    ],
+    [
+      "func_qew",
+      "func_sse"
+    ],
+    [
+      "func_qew",
+      "func_spm"
+    ],
+    [
+      "func_qew",
+      "func_tbi"
+    ],
+    [
+      "func_qew",
+      "func_ktp"
+    ],
+    [
+      "func_sse",
+      "func_bsi"
+    ],
+    [
+      "func_bsi",
+      "func_yjz"
+    ],
+    [
+      "func_bsi",
+      "func_fqn"
+    ],
+    [
+      "func_tbi",
+      "func_lul"
+    ],
+    [
+      "func_tbi",
+      "func_vab"
+    ]
+  ],
+  "functions": [
+    {
+      "description": "Processes variable pjetu (type_eos with subtype_cxe) to produce variable qqmpgi (type_eos with subtype_jnb)",
+      "inputs": [
+        "pjetu"
+      ],
+      "name": "func_soe",
+      "node_type": "core",
+      "output": "qqmpgi"
+    },
+    {
+      "description": "Processes variable fzp (type_eos with subtype_jnb) to produce variable ohasj (type_eos with subtype_taq)",
+      "inputs": [
+        "fzp"
+      ],
+      "name": "func_mvo",
+      "node_type": "core",
+      "output": "ohasj"
+    },
+    {
+      "description": "Processes variables ehfyzl (type_eos with subtype_taq), fdyji (type_eos with subtype_jnb) to produce variable xzvitm (type_fox with subtype_lcx)",
+      "inputs": [
+        "ehfyzl",
+        "fdyji"
+      ],
+      "name": "func_xdi",
+      "node_type": "core",
+      "output": "xzvitm"
+    },
+    {
+      "description": "Processes variable hlu (type_fox with subtype_lcx) to produce variable ufrur (type_fox with subtype_aeo)",
+      "inputs": [
+        "hlu"
+      ],
+      "name": "func_qew",
+      "node_type": "core",
+      "output": "ufrur"
+    },
+    {
+      "description": "Processes variables toiapj (type_fox with subtype_aeo), xotlme (type_fox with subtype_lcx) to produce variable xuryf (type_fox with subtype_rxr)",
+      "inputs": [
+        "toiapj",
+        "xotlme"
+      ],
+      "name": "func_sse",
+      "node_type": "core",
+      "output": "xuryf"
+    },
+    {
+      "description": "Processes variable qqzg (type_eos with subtype_taq) to produce variable lgy (type_fox with subtype_tey)",
+      "inputs": [
+        "qqzg"
+      ],
+      "name": "func_smm",
+      "node_type": "extra",
+      "output": "lgy"
+    },
+    {
+      "description": "Processes variable vkrqws (type_fox with subtype_rxr) to produce variable dicz (type_irm with subtype_kls)",
+      "inputs": [
+        "vkrqws"
+      ],
+      "name": "func_bsi",
+      "node_type": "extra",
+      "output": "dicz"
+    },
+    {
+      "description": "Processes variable fxs (type_irm with subtype_kls) to produce variable vqvbes (type_lbb with subtype_duw)",
+      "inputs": [
+        "fxs"
+      ],
+      "name": "func_yjz",
+      "node_type": "extra",
+      "output": "vqvbes"
+    },
+    {
+      "description": "Processes variable qcqhdb (type_eos with subtype_taq) to produce variable cxo (type_irm with subtype_abp)",
+      "inputs": [
+        "qcqhdb"
+      ],
+      "name": "func_gak",
+      "node_type": "extra",
+      "output": "cxo"
+    },
+    {
+      "description": "Processes variable ome (type_fox with subtype_aeo) to produce variable agobmc (type_fox with subtype_zle)",
+      "inputs": [
+        "ome"
+      ],
+      "name": "func_spm",
+      "node_type": "extra",
+      "output": "agobmc"
+    },
+    {
+      "description": "Processes variable zfnzt (type_fox with subtype_aeo) to produce variable ufb (type_fox with subtype_phg)",
+      "inputs": [
+        "zfnzt"
+      ],
+      "name": "func_tbi",
+      "node_type": "extra",
+      "output": "ufb"
+    },
+    {
+      "description": "Processes variable uwziov (type_irm with subtype_kls) to produce variable fpg (type_vup with subtype_eyy)",
+      "inputs": [
+        "uwziov"
+      ],
+      "name": "func_fqn",
+      "node_type": "extra",
+      "output": "fpg"
+    },
+    {
+      "description": "Processes variable fejg (type_fox with subtype_phg) to produce variable ggv (type_fox with subtype_ffj)",
+      "inputs": [
+        "fejg"
+      ],
+      "name": "func_lul",
+      "node_type": "extra",
+      "output": "ggv"
+    },
+    {
+      "description": "Processes variable wfslj (type_fox with subtype_aeo) to produce variable vqv (type_vup with subtype_pmz)",
+      "inputs": [
+        "wfslj"
+      ],
+      "name": "func_ktp",
+      "node_type": "extra",
+      "output": "vqv"
+    },
+    {
+      "description": "Processes variable xabdc (type_fox with subtype_phg) to produce variable pfawh (type_eos with subtype_gyi)",
+      "inputs": [
+        "xabdc"
+      ],
+      "name": "func_vab",
+      "node_type": "extra",
+      "output": "pfawh"
+    }
+  ],
+  "graph_seed": 400,
+  "initial_values": {
+    "pjetu": 628
+  },
+  "input_variables": [
+    "pjetu"
+  ],
+  "minimum_calls": 5,
+  "target_function": "func_sse",
+  "target_variable": "xuryf",
+  "task_id": "connected_distractors-seed400",
+  "tool_schemas": [
+    {
+      "function": {
+        "description": "Processes variable qcqhdb (type_eos with subtype_taq) to produce variable cxo (type_irm with subtype_abp)",
+        "name": "func_gak",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "qcqhdb": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "qcqhdb"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable wfslj (type_fox with subtype_aeo) to produce variable vqv (type_vup with subtype_pmz)",
+        "name": "func_ktp",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "wfslj": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "wfslj"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable fxs (type_irm with subtype_kls) to produce variable vqvbes (type_lbb with subtype_duw)",
+        "name": "func_yjz",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "fxs": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fxs"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable vkrqws (type_fox with subtype_rxr) to produce variable dicz (type_irm with subtype_kls)",
+        "name": "func_bsi",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "vkrqws": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "vkrqws"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable xabdc (type_fox with subtype_phg) to produce variable pfawh (type_eos with subtype_gyi)",
+        "name": "func_vab",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "xabdc": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "xabdc"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable fejg (type_fox with subtype_phg) to produce variable ggv (type_fox with subtype_ffj)",
+        "name": "func_lul",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "fejg": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fejg"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable qqzg (type_eos with subtype_taq) to produce variable lgy (type_fox with subtype_tey)",
+        "name": "func_smm",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "qqzg": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "qqzg"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables ehfyzl (type_eos with subtype_taq), fdyji (type_eos with subtype_jnb) to produce variable xzvitm (type_fox with subtype_lcx)",
+        "name": "func_xdi",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "ehfyzl": {
+              "type": "integer"
+            },
+            "fdyji": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ehfyzl",
+            "fdyji"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable ome (type_fox with subtype_aeo) to produce variable agobmc (type_fox with subtype_zle)",
+        "name": "func_spm",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "ome": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ome"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable hlu (type_fox with subtype_lcx) to produce variable ufrur (type_fox with subtype_aeo)",
+        "name": "func_qew",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "hlu": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "hlu"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables toiapj (type_fox with subtype_aeo), xotlme (type_fox with subtype_lcx) to produce variable xuryf (type_fox with subtype_rxr)",
+        "name": "func_sse",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "toiapj": {
+              "type": "integer"
+            },
+            "xotlme": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "toiapj",
+            "xotlme"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable uwziov (type_irm with subtype_kls) to produce variable fpg (type_vup with subtype_eyy)",
+        "name": "func_fqn",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "uwziov": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "uwziov"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable pjetu (type_eos with subtype_cxe) to produce variable qqmpgi (type_eos with subtype_jnb)",
+        "name": "func_soe",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "pjetu": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "pjetu"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable fzp (type_eos with subtype_jnb) to produce variable ohasj (type_eos with subtype_taq)",
+        "name": "func_mvo",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "fzp": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fzp"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable zfnzt (type_fox with subtype_aeo) to produce variable ufb (type_fox with subtype_phg)",
+        "name": "func_tbi",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "zfnzt": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "zfnzt"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    }
+  ],
+  "trial_seed": 49132002,
+  "variable_types": {
+    "agobmc": "type_fox with subtype_zle",
+    "cxo": "type_irm with subtype_abp",
+    "dicz": "type_irm with subtype_kls",
+    "ehfyzl": "type_eos with subtype_taq",
+    "fdyji": "type_eos with subtype_jnb",
+    "fejg": "type_fox with subtype_phg",
+    "fpg": "type_vup with subtype_eyy",
+    "fxs": "type_irm with subtype_kls",
+    "fzp": "type_eos with subtype_jnb",
+    "ggv": "type_fox with subtype_ffj",
+    "hlu": "type_fox with subtype_lcx",
+    "lgy": "type_fox with subtype_tey",
+    "ohasj": "type_eos with subtype_taq",
+    "ome": "type_fox with subtype_aeo",
+    "pfawh": "type_eos with subtype_gyi",
+    "pjetu": "type_eos with subtype_cxe",
+    "qcqhdb": "type_eos with subtype_taq",
+    "qqmpgi": "type_eos with subtype_jnb",
+    "qqzg": "type_eos with subtype_taq",
+    "toiapj": "type_fox with subtype_aeo",
+    "ufb": "type_fox with subtype_phg",
+    "ufrur": "type_fox with subtype_aeo",
+    "uwziov": "type_irm with subtype_kls",
+    "vkrqws": "type_fox with subtype_rxr",
+    "vqv": "type_vup with subtype_pmz",
+    "vqvbes": "type_lbb with subtype_duw",
+    "wfslj": "type_fox with subtype_aeo",
+    "xabdc": "type_fox with subtype_phg",
+    "xotlme": "type_fox with subtype_lcx",
+    "xuryf": "type_fox with subtype_rxr",
+    "xzvitm": "type_fox with subtype_lcx",
+    "zfnzt": "type_fox with subtype_aeo"
+  }
+}

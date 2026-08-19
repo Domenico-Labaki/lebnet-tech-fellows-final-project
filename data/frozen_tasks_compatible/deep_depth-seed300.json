@@ -1,0 +1,229 @@
+{
+  "all_values": {
+    "bfjrb": 812,
+    "lfeg": 825,
+    "lkol": 813,
+    "lyrvfm": 841,
+    "osnr": 825,
+    "oxip": 813,
+    "ozkj": 362,
+    "rudso": 576,
+    "tuvt": 812,
+    "xiamft": 812,
+    "yqiva": 812,
+    "zcn": 576
+  },
+  "call_budget": 10,
+  "config_id": "deep_depth",
+  "edges": [
+    [
+      "func_yro",
+      "func_wmm"
+    ],
+    [
+      "func_yro",
+      "func_rqi"
+    ],
+    [
+      "func_yro",
+      "func_woq"
+    ],
+    [
+      "func_wmm",
+      "func_rqi"
+    ],
+    [
+      "func_rqi",
+      "func_cks"
+    ],
+    [
+      "func_cks",
+      "func_woq"
+    ]
+  ],
+  "functions": [
+    {
+      "description": "Processes variable lyrvfm (type_yvf with subtype_ymp) to produce variable xiamft (type_abn with subtype_rwi)",
+      "inputs": [
+        "lyrvfm"
+      ],
+      "name": "func_yro",
+      "node_type": "core",
+      "output": "xiamft"
+    },
+    {
+      "description": "Processes variable bfjrb (type_abn with subtype_rwi) to produce variable oxip (type_yeo with subtype_elq)",
+      "inputs": [
+        "bfjrb"
+      ],
+      "name": "func_wmm",
+      "node_type": "core",
+      "output": "oxip"
+    },
+    {
+      "description": "Processes variables lkol (type_yeo with subtype_elq), tuvt (type_abn with subtype_rwi) to produce variable zcn (type_fkt with subtype_ktq)",
+      "inputs": [
+        "lkol",
+        "tuvt"
+      ],
+      "name": "func_rqi",
+      "node_type": "core",
+      "output": "zcn"
+    },
+    {
+      "description": "Processes variable rudso (type_fkt with subtype_ktq) to produce variable osnr (type_fwa with subtype_tze)",
+      "inputs": [
+        "rudso"
+      ],
+      "name": "func_cks",
+      "node_type": "core",
+      "output": "osnr"
+    },
+    {
+      "description": "Processes variables lfeg (type_fwa with subtype_tze), yqiva (type_abn with subtype_rwi) to produce variable ozkj (type_abn with subtype_gjs)",
+      "inputs": [
+        "lfeg",
+        "yqiva"
+      ],
+      "name": "func_woq",
+      "node_type": "core",
+      "output": "ozkj"
+    }
+  ],
+  "graph_seed": 300,
+  "initial_values": {
+    "lyrvfm": 841
+  },
+  "input_variables": [
+    "lyrvfm"
+  ],
+  "minimum_calls": 5,
+  "target_function": "func_woq",
+  "target_variable": "ozkj",
+  "task_id": "deep_depth-seed300",
+  "tool_schemas": [
+    {
+      "function": {
+        "description": "Processes variable rudso (type_fkt with subtype_ktq) to produce variable osnr (type_fwa with subtype_tze)",
+        "name": "func_cks",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "rudso": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "rudso"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable bfjrb (type_abn with subtype_rwi) to produce variable oxip (type_yeo with subtype_elq)",
+        "name": "func_wmm",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "bfjrb": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "bfjrb"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables lkol (type_yeo with subtype_elq), tuvt (type_abn with subtype_rwi) to produce variable zcn (type_fkt with subtype_ktq)",
+        "name": "func_rqi",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "lkol": {
+              "type": "integer"
+            },
+            "tuvt": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "lkol",
+            "tuvt"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables lfeg (type_fwa with subtype_tze), yqiva (type_abn with subtype_rwi) to produce variable ozkj (type_abn with subtype_gjs)",
+        "name": "func_woq",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "lfeg": {
+              "type": "integer"
+            },
+            "yqiva": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "lfeg",
+            "yqiva"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable lyrvfm (type_yvf with subtype_ymp) to produce variable xiamft (type_abn with subtype_rwi)",
+        "name": "func_yro",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "lyrvfm": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "lyrvfm"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    }
+  ],
+  "trial_seed": 28880953,
+  "variable_types": {
+    "bfjrb": "type_abn with subtype_rwi",
+    "lfeg": "type_fwa with subtype_tze",
+    "lkol": "type_yeo with subtype_elq",
+    "lyrvfm": "type_yvf with subtype_ymp",
+    "osnr": "type_fwa with subtype_tze",
+    "oxip": "type_yeo with subtype_elq",
+    "ozkj": "type_abn with subtype_gjs",
+    "rudso": "type_fkt with subtype_ktq",
+    "tuvt": "type_abn with subtype_rwi",
+    "xiamft": "type_abn with subtype_rwi",
+    "yqiva": "type_abn with subtype_rwi",
+    "zcn": "type_fkt with subtype_ktq"
+  }
+}

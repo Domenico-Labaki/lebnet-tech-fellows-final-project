@@ -1,0 +1,207 @@
+{
+  "all_values": {
+    "bwswv": 452,
+    "fsnny": 452,
+    "hje": 180,
+    "htptbg": 882,
+    "nudvxn": 452,
+    "ofxnc": 452,
+    "oxzs": 678,
+    "qei": 678,
+    "qzfq": 704,
+    "sft": 704
+  },
+  "call_budget": 10,
+  "config_id": "deep_depth",
+  "edges": [
+    [
+      "func_pxw",
+      "func_yhf"
+    ],
+    [
+      "func_yhf",
+      "func_eje"
+    ],
+    [
+      "func_eje",
+      "func_tcd"
+    ],
+    [
+      "func_tcd",
+      "func_lfx"
+    ]
+  ],
+  "functions": [
+    {
+      "description": "Processes variable hje (type_fsn with subtype_nzn) to produce variable nudvxn (type_rig with subtype_rak)",
+      "inputs": [
+        "hje"
+      ],
+      "name": "func_pxw",
+      "node_type": "core",
+      "output": "nudvxn"
+    },
+    {
+      "description": "Processes variable ofxnc (type_rig with subtype_rak) to produce variable sft (type_ycf with subtype_sbc)",
+      "inputs": [
+        "ofxnc"
+      ],
+      "name": "func_yhf",
+      "node_type": "core",
+      "output": "sft"
+    },
+    {
+      "description": "Processes variable qzfq (type_ycf with subtype_sbc) to produce variable qei (type_fsn with subtype_bgu)",
+      "inputs": [
+        "qzfq"
+      ],
+      "name": "func_eje",
+      "node_type": "core",
+      "output": "qei"
+    },
+    {
+      "description": "Processes variable oxzs (type_fsn with subtype_bgu) to produce variable fsnny (type_ftw with subtype_xts)",
+      "inputs": [
+        "oxzs"
+      ],
+      "name": "func_tcd",
+      "node_type": "core",
+      "output": "fsnny"
+    },
+    {
+      "description": "Processes variable bwswv (type_ftw with subtype_xts) to produce variable htptbg (type_fsn with subtype_uke)",
+      "inputs": [
+        "bwswv"
+      ],
+      "name": "func_lfx",
+      "node_type": "core",
+      "output": "htptbg"
+    }
+  ],
+  "graph_seed": 200,
+  "initial_values": {
+    "hje": 180
+  },
+  "input_variables": [
+    "hje"
+  ],
+  "minimum_calls": 5,
+  "target_function": "func_lfx",
+  "target_variable": "htptbg",
+  "task_id": "deep_depth-seed200",
+  "tool_schemas": [
+    {
+      "function": {
+        "description": "Processes variable oxzs (type_fsn with subtype_bgu) to produce variable fsnny (type_ftw with subtype_xts)",
+        "name": "func_tcd",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "oxzs": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "oxzs"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable ofxnc (type_rig with subtype_rak) to produce variable sft (type_ycf with subtype_sbc)",
+        "name": "func_yhf",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "ofxnc": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ofxnc"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable qzfq (type_ycf with subtype_sbc) to produce variable qei (type_fsn with subtype_bgu)",
+        "name": "func_eje",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "qzfq": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "qzfq"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable bwswv (type_ftw with subtype_xts) to produce variable htptbg (type_fsn with subtype_uke)",
+        "name": "func_lfx",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "bwswv": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "bwswv"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable hje (type_fsn with subtype_nzn) to produce variable nudvxn (type_rig with subtype_rak)",
+        "name": "func_pxw",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "hje": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "hje"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    }
+  ],
+  "trial_seed": 27963353,
+  "variable_types": {
+    "bwswv": "type_ftw with subtype_xts",
+    "fsnny": "type_ftw with subtype_xts",
+    "hje": "type_fsn with subtype_nzn",
+    "htptbg": "type_fsn with subtype_uke",
+    "nudvxn": "type_rig with subtype_rak",
+    "ofxnc": "type_rig with subtype_rak",
+    "oxzs": "type_fsn with subtype_bgu",
+    "qei": "type_fsn with subtype_bgu",
+    "qzfq": "type_ycf with subtype_sbc",
+    "sft": "type_ycf with subtype_sbc"
+  }
+}

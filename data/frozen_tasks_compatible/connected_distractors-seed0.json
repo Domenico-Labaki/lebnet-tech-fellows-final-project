@@ -1,0 +1,610 @@
+{
+  "all_values": {
+    "avtoo": 84,
+    "bozdd": 186,
+    "btjl": 976,
+    "bykgh": 72,
+    "cyvvn": 265,
+    "dgflgj": 265,
+    "disyq": 668,
+    "dlckoh": 186,
+    "fdp": 168,
+    "fpwn": 265,
+    "gat": 764,
+    "iub": 265,
+    "jxg": 654,
+    "mwan": 265,
+    "nlefup": 265,
+    "ohceul": 265,
+    "ploz": 186,
+    "qwvx": 72,
+    "rmnva": 300,
+    "rnqtc": 81,
+    "soc": 168,
+    "ttwq": 681,
+    "uqilq": 168,
+    "uwm": 743,
+    "vect": 168,
+    "wqyda": 727,
+    "xbvvhp": 84,
+    "xfa": 18,
+    "xhg": 727,
+    "xlb": 642,
+    "ylouq": 642,
+    "ymcso": 642,
+    "znrv": 743
+  },
+  "call_budget": 10,
+  "config_id": "connected_distractors",
+  "edges": [
+    [
+      "func_cdl",
+      "func_puf"
+    ],
+    [
+      "func_cdl",
+      "func_ywt"
+    ],
+    [
+      "func_cdl",
+      "func_nvm"
+    ],
+    [
+      "func_cdl",
+      "func_dan"
+    ],
+    [
+      "func_cdl",
+      "func_rml"
+    ],
+    [
+      "func_cdl",
+      "func_afy"
+    ],
+    [
+      "func_puf",
+      "func_nss"
+    ],
+    [
+      "func_puf",
+      "func_qfx"
+    ],
+    [
+      "func_nss",
+      "func_nvm"
+    ],
+    [
+      "func_nss",
+      "func_ywt"
+    ],
+    [
+      "func_nss",
+      "func_jzs"
+    ],
+    [
+      "func_nvm",
+      "func_ywt"
+    ],
+    [
+      "func_ywt",
+      "func_dxj"
+    ],
+    [
+      "func_ywt",
+      "func_fmd"
+    ],
+    [
+      "func_fmd",
+      "func_ezg"
+    ],
+    [
+      "func_rml",
+      "func_lrg"
+    ],
+    [
+      "func_ezg",
+      "func_epi"
+    ]
+  ],
+  "functions": [
+    {
+      "description": "Processes variable ttwq (type_azz with subtype_nyr) to produce variable cyvvn (type_pau with subtype_aqn)",
+      "inputs": [
+        "ttwq"
+      ],
+      "name": "func_cdl",
+      "node_type": "core",
+      "output": "cyvvn"
+    },
+    {
+      "description": "Processes variable dgflgj (type_pau with subtype_aqn) to produce variable bozdd (type_azz with subtype_zuf)",
+      "inputs": [
+        "dgflgj"
+      ],
+      "name": "func_puf",
+      "node_type": "core",
+      "output": "bozdd"
+    },
+    {
+      "description": "Processes variable ploz (type_azz with subtype_zuf) to produce variable uqilq (type_azz with subtype_tki)",
+      "inputs": [
+        "ploz"
+      ],
+      "name": "func_nss",
+      "node_type": "core",
+      "output": "uqilq"
+    },
+    {
+      "description": "Processes variables vect (type_azz with subtype_tki), ohceul (type_pau with subtype_aqn) to produce variable bykgh (type_yvn with subtype_itt)",
+      "inputs": [
+        "vect",
+        "ohceul"
+      ],
+      "name": "func_nvm",
+      "node_type": "core",
+      "output": "bykgh"
+    },
+    {
+      "description": "Processes variables qwvx (type_yvn with subtype_itt), soc (type_azz with subtype_tki), iub (type_pau with subtype_aqn) to produce variable ymcso (type_azz with subtype_xha)",
+      "inputs": [
+        "qwvx",
+        "soc",
+        "iub"
+      ],
+      "name": "func_ywt",
+      "node_type": "core",
+      "output": "ymcso"
+    },
+    {
+      "description": "Processes variable nlefup (type_pau with subtype_aqn) to produce variable rmnva (type_gse with subtype_cmu)",
+      "inputs": [
+        "nlefup"
+      ],
+      "name": "func_dan",
+      "node_type": "extra",
+      "output": "rmnva"
+    },
+    {
+      "description": "Processes variable xlb (type_azz with subtype_xha) to produce variable disyq (type_avo with subtype_teb)",
+      "inputs": [
+        "xlb"
+      ],
+      "name": "func_dxj",
+      "node_type": "extra",
+      "output": "disyq"
+    },
+    {
+      "description": "Processes variable fdp (type_azz with subtype_tki) to produce variable btjl (type_avo with subtype_npw)",
+      "inputs": [
+        "fdp"
+      ],
+      "name": "func_jzs",
+      "node_type": "extra",
+      "output": "btjl"
+    },
+    {
+      "description": "Processes variable ylouq (type_azz with subtype_xha) to produce variable avtoo (type_azz with subtype_ihb)",
+      "inputs": [
+        "ylouq"
+      ],
+      "name": "func_fmd",
+      "node_type": "extra",
+      "output": "avtoo"
+    },
+    {
+      "description": "Processes variable mwan (type_pau with subtype_aqn) to produce variable uwm (type_gse with subtype_xzv)",
+      "inputs": [
+        "mwan"
+      ],
+      "name": "func_rml",
+      "node_type": "extra",
+      "output": "uwm"
+    },
+    {
+      "description": "Processes variable dlckoh (type_azz with subtype_zuf) to produce variable gat (type_yvn with subtype_dyl)",
+      "inputs": [
+        "dlckoh"
+      ],
+      "name": "func_qfx",
+      "node_type": "extra",
+      "output": "gat"
+    },
+    {
+      "description": "Processes variable znrv (type_gse with subtype_xzv) to produce variable xfa (type_azz with subtype_xpb)",
+      "inputs": [
+        "znrv"
+      ],
+      "name": "func_lrg",
+      "node_type": "extra",
+      "output": "xfa"
+    },
+    {
+      "description": "Processes variable xbvvhp (type_azz with subtype_ihb) to produce variable xhg (type_pau with subtype_vpt)",
+      "inputs": [
+        "xbvvhp"
+      ],
+      "name": "func_ezg",
+      "node_type": "extra",
+      "output": "xhg"
+    },
+    {
+      "description": "Processes variable wqyda (type_pau with subtype_vpt) to produce variable rnqtc (type_azz with subtype_knr)",
+      "inputs": [
+        "wqyda"
+      ],
+      "name": "func_epi",
+      "node_type": "extra",
+      "output": "rnqtc"
+    },
+    {
+      "description": "Processes variable fpwn (type_pau with subtype_aqn) to produce variable jxg (type_pau with subtype_vvv)",
+      "inputs": [
+        "fpwn"
+      ],
+      "name": "func_afy",
+      "node_type": "extra",
+      "output": "jxg"
+    }
+  ],
+  "graph_seed": 0,
+  "initial_values": {
+    "ttwq": 681
+  },
+  "input_variables": [
+    "ttwq"
+  ],
+  "minimum_calls": 5,
+  "target_function": "func_ywt",
+  "target_variable": "ymcso",
+  "task_id": "connected_distractors-seed0",
+  "tool_schemas": [
+    {
+      "function": {
+        "description": "Processes variable ylouq (type_azz with subtype_xha) to produce variable avtoo (type_azz with subtype_ihb)",
+        "name": "func_fmd",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "ylouq": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ylouq"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable wqyda (type_pau with subtype_vpt) to produce variable rnqtc (type_azz with subtype_knr)",
+        "name": "func_epi",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "wqyda": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "wqyda"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable fdp (type_azz with subtype_tki) to produce variable btjl (type_avo with subtype_npw)",
+        "name": "func_jzs",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "fdp": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fdp"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable xlb (type_azz with subtype_xha) to produce variable disyq (type_avo with subtype_teb)",
+        "name": "func_dxj",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "xlb": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "xlb"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable fpwn (type_pau with subtype_aqn) to produce variable jxg (type_pau with subtype_vvv)",
+        "name": "func_afy",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "fpwn": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fpwn"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable xbvvhp (type_azz with subtype_ihb) to produce variable xhg (type_pau with subtype_vpt)",
+        "name": "func_ezg",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "xbvvhp": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "xbvvhp"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable nlefup (type_pau with subtype_aqn) to produce variable rmnva (type_gse with subtype_cmu)",
+        "name": "func_dan",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "nlefup": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "nlefup"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable ploz (type_azz with subtype_zuf) to produce variable uqilq (type_azz with subtype_tki)",
+        "name": "func_nss",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "ploz": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ploz"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable mwan (type_pau with subtype_aqn) to produce variable uwm (type_gse with subtype_xzv)",
+        "name": "func_rml",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "mwan": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "mwan"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables vect (type_azz with subtype_tki), ohceul (type_pau with subtype_aqn) to produce variable bykgh (type_yvn with subtype_itt)",
+        "name": "func_nvm",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "ohceul": {
+              "type": "integer"
+            },
+            "vect": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "vect",
+            "ohceul"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables qwvx (type_yvn with subtype_itt), soc (type_azz with subtype_tki), iub (type_pau with subtype_aqn) to produce variable ymcso (type_azz with subtype_xha)",
+        "name": "func_ywt",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "iub": {
+              "type": "integer"
+            },
+            "qwvx": {
+              "type": "integer"
+            },
+            "soc": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "qwvx",
+            "soc",
+            "iub"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable znrv (type_gse with subtype_xzv) to produce variable xfa (type_azz with subtype_xpb)",
+        "name": "func_lrg",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "znrv": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "znrv"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable ttwq (type_azz with subtype_nyr) to produce variable cyvvn (type_pau with subtype_aqn)",
+        "name": "func_cdl",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "ttwq": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ttwq"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable dgflgj (type_pau with subtype_aqn) to produce variable bozdd (type_azz with subtype_zuf)",
+        "name": "func_puf",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "dgflgj": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "dgflgj"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable dlckoh (type_azz with subtype_zuf) to produce variable gat (type_yvn with subtype_dyl)",
+        "name": "func_qfx",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "dlckoh": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "dlckoh"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    }
+  ],
+  "trial_seed": 45461602,
+  "variable_types": {
+    "avtoo": "type_azz with subtype_ihb",
+    "bozdd": "type_azz with subtype_zuf",
+    "btjl": "type_avo with subtype_npw",
+    "bykgh": "type_yvn with subtype_itt",
+    "cyvvn": "type_pau with subtype_aqn",
+    "dgflgj": "type_pau with subtype_aqn",
+    "disyq": "type_avo with subtype_teb",
+    "dlckoh": "type_azz with subtype_zuf",
+    "fdp": "type_azz with subtype_tki",
+    "fpwn": "type_pau with subtype_aqn",
+    "gat": "type_yvn with subtype_dyl",
+    "iub": "type_pau with subtype_aqn",
+    "jxg": "type_pau with subtype_vvv",
+    "mwan": "type_pau with subtype_aqn",
+    "nlefup": "type_pau with subtype_aqn",
+    "ohceul": "type_pau with subtype_aqn",
+    "ploz": "type_azz with subtype_zuf",
+    "qwvx": "type_yvn with subtype_itt",
+    "rmnva": "type_gse with subtype_cmu",
+    "rnqtc": "type_azz with subtype_knr",
+    "soc": "type_azz with subtype_tki",
+    "ttwq": "type_azz with subtype_nyr",
+    "uqilq": "type_azz with subtype_tki",
+    "uwm": "type_gse with subtype_xzv",
+    "vect": "type_azz with subtype_tki",
+    "wqyda": "type_pau with subtype_vpt",
+    "xbvvhp": "type_azz with subtype_ihb",
+    "xfa": "type_azz with subtype_xpb",
+    "xhg": "type_pau with subtype_vpt",
+    "xlb": "type_azz with subtype_xha",
+    "ylouq": "type_azz with subtype_xha",
+    "ymcso": "type_azz with subtype_xha",
+    "znrv": "type_gse with subtype_xzv"
+  }
+}

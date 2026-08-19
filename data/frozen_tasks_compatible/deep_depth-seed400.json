@@ -1,0 +1,218 @@
+{
+  "all_values": {
+    "bdoffe": 351,
+    "btquru": 778,
+    "crgui": 762,
+    "njmkci": 448,
+    "rovkwg": 123,
+    "rxqxzo": 703,
+    "sgn": 703,
+    "stm": 778,
+    "udhw": 448,
+    "ybixtz": 351,
+    "ynn": 351
+  },
+  "call_budget": 10,
+  "config_id": "deep_depth",
+  "edges": [
+    [
+      "func_soe",
+      "func_mvo"
+    ],
+    [
+      "func_soe",
+      "func_sse"
+    ],
+    [
+      "func_mvo",
+      "func_xdi"
+    ],
+    [
+      "func_xdi",
+      "func_qew"
+    ],
+    [
+      "func_qew",
+      "func_sse"
+    ]
+  ],
+  "functions": [
+    {
+      "description": "Processes variable crgui (type_hmf with subtype_jxm) to produce variable ynn (type_xpo with subtype_hiq)",
+      "inputs": [
+        "crgui"
+      ],
+      "name": "func_soe",
+      "node_type": "core",
+      "output": "ynn"
+    },
+    {
+      "description": "Processes variable ybixtz (type_xpo with subtype_hiq) to produce variable rxqxzo (type_hmf with subtype_nvg)",
+      "inputs": [
+        "ybixtz"
+      ],
+      "name": "func_mvo",
+      "node_type": "core",
+      "output": "rxqxzo"
+    },
+    {
+      "description": "Processes variable sgn (type_hmf with subtype_nvg) to produce variable stm (type_nsq with subtype_fej)",
+      "inputs": [
+        "sgn"
+      ],
+      "name": "func_xdi",
+      "node_type": "core",
+      "output": "stm"
+    },
+    {
+      "description": "Processes variable btquru (type_nsq with subtype_fej) to produce variable njmkci (type_hmf with subtype_uux)",
+      "inputs": [
+        "btquru"
+      ],
+      "name": "func_qew",
+      "node_type": "core",
+      "output": "njmkci"
+    },
+    {
+      "description": "Processes variables udhw (type_hmf with subtype_uux), bdoffe (type_xpo with subtype_hiq) to produce variable rovkwg (type_xpo with subtype_rba)",
+      "inputs": [
+        "udhw",
+        "bdoffe"
+      ],
+      "name": "func_sse",
+      "node_type": "core",
+      "output": "rovkwg"
+    }
+  ],
+  "graph_seed": 400,
+  "initial_values": {
+    "crgui": 762
+  },
+  "input_variables": [
+    "crgui"
+  ],
+  "minimum_calls": 5,
+  "target_function": "func_sse",
+  "target_variable": "rovkwg",
+  "task_id": "deep_depth-seed400",
+  "tool_schemas": [
+    {
+      "function": {
+        "description": "Processes variable btquru (type_nsq with subtype_fej) to produce variable njmkci (type_hmf with subtype_uux)",
+        "name": "func_qew",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "btquru": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "btquru"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable ybixtz (type_xpo with subtype_hiq) to produce variable rxqxzo (type_hmf with subtype_nvg)",
+        "name": "func_mvo",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "ybixtz": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ybixtz"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable sgn (type_hmf with subtype_nvg) to produce variable stm (type_nsq with subtype_fej)",
+        "name": "func_xdi",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "sgn": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "sgn"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables udhw (type_hmf with subtype_uux), bdoffe (type_xpo with subtype_hiq) to produce variable rovkwg (type_xpo with subtype_rba)",
+        "name": "func_sse",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "bdoffe": {
+              "type": "integer"
+            },
+            "udhw": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "udhw",
+            "bdoffe"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable crgui (type_hmf with subtype_jxm) to produce variable ynn (type_xpo with subtype_hiq)",
+        "name": "func_soe",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "crgui": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "crgui"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    }
+  ],
+  "trial_seed": 29798553,
+  "variable_types": {
+    "bdoffe": "type_xpo with subtype_hiq",
+    "btquru": "type_nsq with subtype_fej",
+    "crgui": "type_hmf with subtype_jxm",
+    "njmkci": "type_hmf with subtype_uux",
+    "rovkwg": "type_xpo with subtype_rba",
+    "rxqxzo": "type_hmf with subtype_nvg",
+    "sgn": "type_hmf with subtype_nvg",
+    "stm": "type_nsq with subtype_fej",
+    "udhw": "type_hmf with subtype_uux",
+    "ybixtz": "type_xpo with subtype_hiq",
+    "ynn": "type_xpo with subtype_hiq"
+  }
+}

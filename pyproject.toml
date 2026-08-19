@@ -1,0 +1,21 @@
+[project]
+name = "statebench"
+version = "0.1.0"
+description = "Controlled working-state evaluation for multi-step tool use"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "matplotlib>=3.9,<4",
+  "networkx==3.5",
+  "numpy==2.3.0",
+  "ollama>=0.6,<1",
+  "pandas>=2.2,<3",
+  "python-docx>=1.1,<2",
+  "pyyaml>=6,<7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

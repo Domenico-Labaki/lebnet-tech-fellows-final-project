@@ -1,0 +1,234 @@
+{
+  "all_values": {
+    "dken": 695,
+    "frhb": 681,
+    "gzb": 577,
+    "kjdop": 25,
+    "kvri": 25,
+    "pvtcg": 374,
+    "qslh": 681,
+    "swxlqe": 181,
+    "xxanh": 374,
+    "ysgsuf": 331,
+    "zjuik": 168,
+    "zoyd": 331,
+    "zrtxr": 550
+  },
+  "call_budget": 10,
+  "config_id": "easy_depth",
+  "edges": [
+    [
+      "func_yro",
+      "func_wmm"
+    ],
+    [
+      "func_wyz",
+      "func_wmm"
+    ],
+    [
+      "func_whb",
+      "func_wmm"
+    ],
+    [
+      "func_dpm",
+      "func_wmm"
+    ]
+  ],
+  "functions": [
+    {
+      "description": "Processes variable gzb (type_elc with subtype_cpn) to produce variable kvri (type_elc with subtype_bgz)",
+      "inputs": [
+        "gzb"
+      ],
+      "name": "func_yro",
+      "node_type": "core",
+      "output": "kvri"
+    },
+    {
+      "description": "Processes variables kjdop (type_elc with subtype_bgz), zoyd (type_jpy with subtype_dky), xxanh (type_ogv with subtype_cvm), frhb (type_shr with subtype_qdf) to produce variable zjuik (type_ogv with subtype_baa)",
+      "inputs": [
+        "kjdop",
+        "zoyd",
+        "xxanh",
+        "frhb"
+      ],
+      "name": "func_wmm",
+      "node_type": "core",
+      "output": "zjuik"
+    },
+    {
+      "description": "Processes variable dken (type_ogv with subtype_cat) to produce variable ysgsuf (type_jpy with subtype_dky)",
+      "inputs": [
+        "dken"
+      ],
+      "name": "func_wyz",
+      "node_type": "core",
+      "output": "ysgsuf"
+    },
+    {
+      "description": "Processes variable swxlqe (type_ogv with subtype_ynh) to produce variable pvtcg (type_ogv with subtype_cvm)",
+      "inputs": [
+        "swxlqe"
+      ],
+      "name": "func_whb",
+      "node_type": "core",
+      "output": "pvtcg"
+    },
+    {
+      "description": "Processes variable zrtxr (type_elc with subtype_lws) to produce variable qslh (type_shr with subtype_qdf)",
+      "inputs": [
+        "zrtxr"
+      ],
+      "name": "func_dpm",
+      "node_type": "core",
+      "output": "qslh"
+    }
+  ],
+  "graph_seed": 300,
+  "initial_values": {
+    "dken": 695,
+    "gzb": 577,
+    "swxlqe": 181,
+    "zrtxr": 550
+  },
+  "input_variables": [
+    "dken",
+    "gzb",
+    "swxlqe",
+    "zrtxr"
+  ],
+  "minimum_calls": 5,
+  "target_function": "func_wmm",
+  "target_variable": "zjuik",
+  "task_id": "easy_depth-seed300",
+  "tool_schemas": [
+    {
+      "function": {
+        "description": "Processes variable swxlqe (type_ogv with subtype_ynh) to produce variable pvtcg (type_ogv with subtype_cvm)",
+        "name": "func_whb",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "swxlqe": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "swxlqe"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables kjdop (type_elc with subtype_bgz), zoyd (type_jpy with subtype_dky), xxanh (type_ogv with subtype_cvm), frhb (type_shr with subtype_qdf) to produce variable zjuik (type_ogv with subtype_baa)",
+        "name": "func_wmm",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "frhb": {
+              "type": "integer"
+            },
+            "kjdop": {
+              "type": "integer"
+            },
+            "xxanh": {
+              "type": "integer"
+            },
+            "zoyd": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "kjdop",
+            "zoyd",
+            "xxanh",
+            "frhb"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable dken (type_ogv with subtype_cat) to produce variable ysgsuf (type_jpy with subtype_dky)",
+        "name": "func_wyz",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "dken": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "dken"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable zrtxr (type_elc with subtype_lws) to produce variable qslh (type_shr with subtype_qdf)",
+        "name": "func_dpm",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "zrtxr": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "zrtxr"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable gzb (type_elc with subtype_cpn) to produce variable kvri (type_elc with subtype_bgz)",
+        "name": "func_yro",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "gzb": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "gzb"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    }
+  ],
+  "trial_seed": 28952592,
+  "variable_types": {
+    "dken": "type_ogv with subtype_cat",
+    "frhb": "type_shr with subtype_qdf",
+    "gzb": "type_elc with subtype_cpn",
+    "kjdop": "type_elc with subtype_bgz",
+    "kvri": "type_elc with subtype_bgz",
+    "pvtcg": "type_ogv with subtype_cvm",
+    "qslh": "type_shr with subtype_qdf",
+    "swxlqe": "type_ogv with subtype_ynh",
+    "xxanh": "type_ogv with subtype_cvm",
+    "ysgsuf": "type_jpy with subtype_dky",
+    "zjuik": "type_ogv with subtype_baa",
+    "zoyd": "type_jpy with subtype_dky",
+    "zrtxr": "type_elc with subtype_lws"
+  }
+}

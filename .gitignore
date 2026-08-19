@@ -1,0 +1,24 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+.env
+local_notes/
+results/**/raw/
+results/*.log
+report/*.pdf
+report/*.docx
+!report/StateBench_Report.docx
+report/qa_render*/
+report/qa_work*/
+report/qa_temp*/
+report/tmp_render*/
+video/.build/
+node_modules/
+*.egg-info/
+Tech Fellows_ Project Announcement.eml
+StateBench End-to-End Implementation.md
+StateBench End-to-End Implementation - Local Ollama.md
+funcbenchgen_working_state_proposal.md
+pytest-cache-files-*/

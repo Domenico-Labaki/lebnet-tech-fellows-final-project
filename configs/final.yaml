@@ -1,0 +1,68 @@
+# Canonical 75-execution StateBench experiment.
+experiment_name: statebench_qwen36_27b_final
+provider: groq
+model: qwen/qwen3.6-27b
+api_base: https://api.groq.com/openai/v1
+api_key_env: GROQ_API_KEY
+request_timeout_seconds: 120
+max_rate_limit_retries: 8
+rate_limit_padding_seconds: 2
+temperature: 0.0
+top_p: 1.0
+num_predict: 4096
+reasoning_effort: default
+call_budget_multiplier: 2
+function_shuffle_seed: 42
+on_wrong_inputs: Error
+fixtures_dir: data/frozen_tasks_compatible
+results_dir: results/final/raw
+processed_dir: results/final/processed
+figures_dir: results/final/figures
+task_ids:
+  - easy_depth-seed0
+  - easy_depth-seed100
+  - easy_depth-seed200
+  - easy_depth-seed300
+  - easy_depth-seed400
+  - deep_depth-seed0
+  - deep_depth-seed100
+  - deep_depth-seed200
+  - deep_depth-seed300
+  - deep_depth-seed400
+  - connected_distractors-seed0
+  - connected_distractors-seed100
+  - connected_distractors-seed200
+  - connected_distractors-seed300
+  - connected_distractors-seed400
+strategies:
+  - full_history
+  - paper_restatement
+  - json_state
+  - dependency_pruning
+  - live_dependency_pruning
+system_prompt: >
+  You are performing a stateful tool workflow. Make exactly one tool call per
+  response, then wait for its result before choosing another tool. Use only
+  values explicitly given in the initial request or returned by a prior tool;
+  never guess, infer, reuse, or fabricate a value. Do not call a function until
+  every required input value has been observed. Once the target value is
+  returned, answer with that exact value and make no further calls.
+configs:
+  - id: easy_depth
+    core_nodes: 5
+    max_critical_path_length: 1
+    connected_nodes: 0
+    disconnected_nodes: 0
+    show_variable_names_in_description: true
+  - id: deep_depth
+    core_nodes: 5
+    max_critical_path_length: 4
+    connected_nodes: 0
+    disconnected_nodes: 0
+    show_variable_names_in_description: true
+  - id: connected_distractors
+    core_nodes: 5
+    max_critical_path_length: 4
+    connected_nodes: 10
+    disconnected_nodes: 0
+    show_variable_names_in_description: true

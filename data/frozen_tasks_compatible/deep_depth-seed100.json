@@ -1,0 +1,240 @@
+{
+  "all_values": {
+    "agecpu": 288,
+    "aiqgl": 468,
+    "cfo": 468,
+    "fhhlk": 288,
+    "fwg": 288,
+    "hywg": 254,
+    "llg": 257,
+    "mcc": 288,
+    "njjov": 254,
+    "ofakmd": 288,
+    "ofcvr": 254,
+    "orx": 257,
+    "qyau": 613
+  },
+  "call_budget": 10,
+  "config_id": "deep_depth",
+  "edges": [
+    [
+      "func_ftw",
+      "func_rgy"
+    ],
+    [
+      "func_ftw",
+      "func_mql"
+    ],
+    [
+      "func_ftw",
+      "func_cby"
+    ],
+    [
+      "func_ftw",
+      "func_sqo"
+    ],
+    [
+      "func_rgy",
+      "func_sqo"
+    ],
+    [
+      "func_sqo",
+      "func_cby"
+    ],
+    [
+      "func_cby",
+      "func_mql"
+    ]
+  ],
+  "functions": [
+    {
+      "description": "Processes variable hywg (type_xby with subtype_veu) to produce variable fwg (type_kpi with subtype_sdp)",
+      "inputs": [
+        "hywg"
+      ],
+      "name": "func_ftw",
+      "node_type": "core",
+      "output": "fwg"
+    },
+    {
+      "description": "Processes variable agecpu (type_kpi with subtype_sdp) to produce variable njjov (type_ewt with subtype_pfe)",
+      "inputs": [
+        "agecpu"
+      ],
+      "name": "func_rgy",
+      "node_type": "core",
+      "output": "njjov"
+    },
+    {
+      "description": "Processes variables ofcvr (type_ewt with subtype_pfe), fhhlk (type_kpi with subtype_sdp) to produce variable llg (type_ukb with subtype_mad)",
+      "inputs": [
+        "ofcvr",
+        "fhhlk"
+      ],
+      "name": "func_sqo",
+      "node_type": "core",
+      "output": "llg"
+    },
+    {
+      "description": "Processes variables orx (type_ukb with subtype_mad), ofakmd (type_kpi with subtype_sdp) to produce variable aiqgl (type_ukb with subtype_qhk)",
+      "inputs": [
+        "orx",
+        "ofakmd"
+      ],
+      "name": "func_cby",
+      "node_type": "core",
+      "output": "aiqgl"
+    },
+    {
+      "description": "Processes variables cfo (type_ukb with subtype_qhk), mcc (type_kpi with subtype_sdp) to produce variable qyau (type_sdt with subtype_dmb)",
+      "inputs": [
+        "cfo",
+        "mcc"
+      ],
+      "name": "func_mql",
+      "node_type": "core",
+      "output": "qyau"
+    }
+  ],
+  "graph_seed": 100,
+  "initial_values": {
+    "hywg": 254
+  },
+  "input_variables": [
+    "hywg"
+  ],
+  "minimum_calls": 5,
+  "target_function": "func_mql",
+  "target_variable": "qyau",
+  "task_id": "deep_depth-seed100",
+  "tool_schemas": [
+    {
+      "function": {
+        "description": "Processes variables orx (type_ukb with subtype_mad), ofakmd (type_kpi with subtype_sdp) to produce variable aiqgl (type_ukb with subtype_qhk)",
+        "name": "func_cby",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "ofakmd": {
+              "type": "integer"
+            },
+            "orx": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "orx",
+            "ofakmd"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable agecpu (type_kpi with subtype_sdp) to produce variable njjov (type_ewt with subtype_pfe)",
+        "name": "func_rgy",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "agecpu": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "agecpu"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables ofcvr (type_ewt with subtype_pfe), fhhlk (type_kpi with subtype_sdp) to produce variable llg (type_ukb with subtype_mad)",
+        "name": "func_sqo",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "fhhlk": {
+              "type": "integer"
+            },
+            "ofcvr": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ofcvr",
+            "fhhlk"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables cfo (type_ukb with subtype_qhk), mcc (type_kpi with subtype_sdp) to produce variable qyau (type_sdt with subtype_dmb)",
+        "name": "func_mql",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "cfo": {
+              "type": "integer"
+            },
+            "mcc": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "cfo",
+            "mcc"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable hywg (type_xby with subtype_veu) to produce variable fwg (type_kpi with subtype_sdp)",
+        "name": "func_ftw",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "hywg": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "hywg"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    }
+  ],
+  "trial_seed": 27045753,
+  "variable_types": {
+    "agecpu": "type_kpi with subtype_sdp",
+    "aiqgl": "type_ukb with subtype_qhk",
+    "cfo": "type_ukb with subtype_qhk",
+    "fhhlk": "type_kpi with subtype_sdp",
+    "fwg": "type_kpi with subtype_sdp",
+    "hywg": "type_xby with subtype_veu",
+    "llg": "type_ukb with subtype_mad",
+    "mcc": "type_kpi with subtype_sdp",
+    "njjov": "type_ewt with subtype_pfe",
+    "ofakmd": "type_kpi with subtype_sdp",
+    "ofcvr": "type_ewt with subtype_pfe",
+    "orx": "type_ukb with subtype_mad",
+    "qyau": "type_sdt with subtype_dmb"
+  }
+}

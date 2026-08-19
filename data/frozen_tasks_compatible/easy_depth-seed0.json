@@ -1,0 +1,234 @@
+{
+  "all_values": {
+    "awbmms": 473,
+    "cro": 473,
+    "irj": 174,
+    "ixxjb": 324,
+    "jmoj": 936,
+    "krfert": 962,
+    "lqsqwa": 967,
+    "oslny": 174,
+    "rmnow": 152,
+    "rpds": 962,
+    "xapz": 596,
+    "xgsydo": 65,
+    "ztxkr": 65
+  },
+  "call_budget": 10,
+  "config_id": "easy_depth",
+  "edges": [
+    [
+      "func_cdl",
+      "func_puf"
+    ],
+    [
+      "func_hmb",
+      "func_puf"
+    ],
+    [
+      "func_aqf",
+      "func_puf"
+    ],
+    [
+      "func_zip",
+      "func_puf"
+    ]
+  ],
+  "functions": [
+    {
+      "description": "Processes variable lqsqwa (type_mzm with subtype_fuj) to produce variable awbmms (type_vzh with subtype_djt)",
+      "inputs": [
+        "lqsqwa"
+      ],
+      "name": "func_cdl",
+      "node_type": "core",
+      "output": "awbmms"
+    },
+    {
+      "description": "Processes variables cro (type_vzh with subtype_djt), ztxkr (type_hrk with subtype_tyw), irj (type_vzh with subtype_nkh), krfert (type_vzh with subtype_nwu) to produce variable ixxjb (type_ywg with subtype_dlw)",
+      "inputs": [
+        "cro",
+        "ztxkr",
+        "irj",
+        "krfert"
+      ],
+      "name": "func_puf",
+      "node_type": "core",
+      "output": "ixxjb"
+    },
+    {
+      "description": "Processes variable xapz (type_ywg with subtype_ymg) to produce variable xgsydo (type_hrk with subtype_tyw)",
+      "inputs": [
+        "xapz"
+      ],
+      "name": "func_hmb",
+      "node_type": "core",
+      "output": "xgsydo"
+    },
+    {
+      "description": "Processes variable rmnow (type_ywg with subtype_ahe) to produce variable oslny (type_vzh with subtype_nkh)",
+      "inputs": [
+        "rmnow"
+      ],
+      "name": "func_aqf",
+      "node_type": "core",
+      "output": "oslny"
+    },
+    {
+      "description": "Processes variable jmoj (type_hrk with subtype_mzn) to produce variable rpds (type_vzh with subtype_nwu)",
+      "inputs": [
+        "jmoj"
+      ],
+      "name": "func_zip",
+      "node_type": "core",
+      "output": "rpds"
+    }
+  ],
+  "graph_seed": 0,
+  "initial_values": {
+    "jmoj": 936,
+    "lqsqwa": 967,
+    "rmnow": 152,
+    "xapz": 596
+  },
+  "input_variables": [
+    "jmoj",
+    "lqsqwa",
+    "rmnow",
+    "xapz"
+  ],
+  "minimum_calls": 5,
+  "target_function": "func_puf",
+  "target_variable": "ixxjb",
+  "task_id": "easy_depth-seed0",
+  "tool_schemas": [
+    {
+      "function": {
+        "description": "Processes variable rmnow (type_ywg with subtype_ahe) to produce variable oslny (type_vzh with subtype_nkh)",
+        "name": "func_aqf",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "rmnow": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "rmnow"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables cro (type_vzh with subtype_djt), ztxkr (type_hrk with subtype_tyw), irj (type_vzh with subtype_nkh), krfert (type_vzh with subtype_nwu) to produce variable ixxjb (type_ywg with subtype_dlw)",
+        "name": "func_puf",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "cro": {
+              "type": "integer"
+            },
+            "irj": {
+              "type": "integer"
+            },
+            "krfert": {
+              "type": "integer"
+            },
+            "ztxkr": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "cro",
+            "ztxkr",
+            "irj",
+            "krfert"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable xapz (type_ywg with subtype_ymg) to produce variable xgsydo (type_hrk with subtype_tyw)",
+        "name": "func_hmb",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "xapz": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "xapz"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable jmoj (type_hrk with subtype_mzn) to produce variable rpds (type_vzh with subtype_nwu)",
+        "name": "func_zip",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "jmoj": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "jmoj"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable lqsqwa (type_mzm with subtype_fuj) to produce variable awbmms (type_vzh with subtype_djt)",
+        "name": "func_cdl",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "lqsqwa": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "lqsqwa"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    }
+  ],
+  "trial_seed": 26199792,
+  "variable_types": {
+    "awbmms": "type_vzh with subtype_djt",
+    "cro": "type_vzh with subtype_djt",
+    "irj": "type_vzh with subtype_nkh",
+    "ixxjb": "type_ywg with subtype_dlw",
+    "jmoj": "type_hrk with subtype_mzn",
+    "krfert": "type_vzh with subtype_nwu",
+    "lqsqwa": "type_mzm with subtype_fuj",
+    "oslny": "type_vzh with subtype_nkh",
+    "rmnow": "type_ywg with subtype_ahe",
+    "rpds": "type_vzh with subtype_nwu",
+    "xapz": "type_ywg with subtype_ymg",
+    "xgsydo": "type_hrk with subtype_tyw",
+    "ztxkr": "type_hrk with subtype_tyw"
+  }
+}

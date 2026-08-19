@@ -1,0 +1,251 @@
+{
+  "all_values": {
+    "alpcoh": 571,
+    "gdx": 571,
+    "hfa": 571,
+    "izwjm": 729,
+    "lov": 982,
+    "lusy": 729,
+    "nholwc": 771,
+    "oitst": 856,
+    "pnx": 103,
+    "rjc": 729,
+    "soyc": 982,
+    "swxlry": 982,
+    "ulcdig": 982,
+    "wvybs": 103
+  },
+  "call_budget": 10,
+  "config_id": "deep_depth",
+  "edges": [
+    [
+      "func_cdl",
+      "func_puf"
+    ],
+    [
+      "func_cdl",
+      "func_nss"
+    ],
+    [
+      "func_puf",
+      "func_nss"
+    ],
+    [
+      "func_puf",
+      "func_nvm"
+    ],
+    [
+      "func_puf",
+      "func_ywt"
+    ],
+    [
+      "func_nss",
+      "func_nvm"
+    ],
+    [
+      "func_nss",
+      "func_ywt"
+    ],
+    [
+      "func_nvm",
+      "func_ywt"
+    ]
+  ],
+  "functions": [
+    {
+      "description": "Processes variable nholwc (type_afm with subtype_uki) to produce variable hfa (type_ddt with subtype_yza)",
+      "inputs": [
+        "nholwc"
+      ],
+      "name": "func_cdl",
+      "node_type": "core",
+      "output": "hfa"
+    },
+    {
+      "description": "Processes variable alpcoh (type_ddt with subtype_yza) to produce variable lov (type_vtc with subtype_mxq)",
+      "inputs": [
+        "alpcoh"
+      ],
+      "name": "func_puf",
+      "node_type": "core",
+      "output": "lov"
+    },
+    {
+      "description": "Processes variables ulcdig (type_vtc with subtype_mxq), gdx (type_ddt with subtype_yza) to produce variable rjc (type_afm with subtype_nsy)",
+      "inputs": [
+        "ulcdig",
+        "gdx"
+      ],
+      "name": "func_nss",
+      "node_type": "core",
+      "output": "rjc"
+    },
+    {
+      "description": "Processes variables izwjm (type_afm with subtype_nsy), swxlry (type_vtc with subtype_mxq) to produce variable wvybs (type_afm with subtype_qyz)",
+      "inputs": [
+        "izwjm",
+        "swxlry"
+      ],
+      "name": "func_nvm",
+      "node_type": "core",
+      "output": "wvybs"
+    },
+    {
+      "description": "Processes variables pnx (type_afm with subtype_qyz), lusy (type_afm with subtype_nsy), soyc (type_vtc with subtype_mxq) to produce variable oitst (type_afm with subtype_ncy)",
+      "inputs": [
+        "pnx",
+        "lusy",
+        "soyc"
+      ],
+      "name": "func_ywt",
+      "node_type": "core",
+      "output": "oitst"
+    }
+  ],
+  "graph_seed": 0,
+  "initial_values": {
+    "nholwc": 771
+  },
+  "input_variables": [
+    "nholwc"
+  ],
+  "minimum_calls": 5,
+  "target_function": "func_ywt",
+  "target_variable": "oitst",
+  "task_id": "deep_depth-seed0",
+  "tool_schemas": [
+    {
+      "function": {
+        "description": "Processes variables izwjm (type_afm with subtype_nsy), swxlry (type_vtc with subtype_mxq) to produce variable wvybs (type_afm with subtype_qyz)",
+        "name": "func_nvm",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "izwjm": {
+              "type": "integer"
+            },
+            "swxlry": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "izwjm",
+            "swxlry"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable alpcoh (type_ddt with subtype_yza) to produce variable lov (type_vtc with subtype_mxq)",
+        "name": "func_puf",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "alpcoh": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "alpcoh"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables ulcdig (type_vtc with subtype_mxq), gdx (type_ddt with subtype_yza) to produce variable rjc (type_afm with subtype_nsy)",
+        "name": "func_nss",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "gdx": {
+              "type": "integer"
+            },
+            "ulcdig": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ulcdig",
+            "gdx"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables pnx (type_afm with subtype_qyz), lusy (type_afm with subtype_nsy), soyc (type_vtc with subtype_mxq) to produce variable oitst (type_afm with subtype_ncy)",
+        "name": "func_ywt",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "lusy": {
+              "type": "integer"
+            },
+            "pnx": {
+              "type": "integer"
+            },
+            "soyc": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "pnx",
+            "lusy",
+            "soyc"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable nholwc (type_afm with subtype_uki) to produce variable hfa (type_ddt with subtype_yza)",
+        "name": "func_cdl",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "nholwc": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "nholwc"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    }
+  ],
+  "trial_seed": 26128153,
+  "variable_types": {
+    "alpcoh": "type_ddt with subtype_yza",
+    "gdx": "type_ddt with subtype_yza",
+    "hfa": "type_ddt with subtype_yza",
+    "izwjm": "type_afm with subtype_nsy",
+    "lov": "type_vtc with subtype_mxq",
+    "lusy": "type_afm with subtype_nsy",
+    "nholwc": "type_afm with subtype_uki",
+    "oitst": "type_afm with subtype_ncy",
+    "pnx": "type_afm with subtype_qyz",
+    "rjc": "type_afm with subtype_nsy",
+    "soyc": "type_vtc with subtype_mxq",
+    "swxlry": "type_vtc with subtype_mxq",
+    "ulcdig": "type_vtc with subtype_mxq",
+    "wvybs": "type_afm with subtype_qyz"
+  }
+}

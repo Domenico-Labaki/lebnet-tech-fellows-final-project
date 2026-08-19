@@ -1,0 +1,234 @@
+{
+  "all_values": {
+    "adm": 928,
+    "bag": 928,
+    "bgjo": 558,
+    "cmbb": 944,
+    "hlxevp": 739,
+    "jcjiy": 902,
+    "ouqnrz": 558,
+    "qrpr": 823,
+    "rmpqe": 676,
+    "vuub": 997,
+    "wart": 806,
+    "xwequr": 739,
+    "ytmrx": 997
+  },
+  "call_budget": 10,
+  "config_id": "easy_depth",
+  "edges": [
+    [
+      "func_ftw",
+      "func_rgy"
+    ],
+    [
+      "func_sje",
+      "func_rgy"
+    ],
+    [
+      "func_lnj",
+      "func_rgy"
+    ],
+    [
+      "func_qwu",
+      "func_rgy"
+    ]
+  ],
+  "functions": [
+    {
+      "description": "Processes variable wart (type_zcq with subtype_lgg) to produce variable vuub (type_zcq with subtype_yit)",
+      "inputs": [
+        "wart"
+      ],
+      "name": "func_ftw",
+      "node_type": "core",
+      "output": "vuub"
+    },
+    {
+      "description": "Processes variables ytmrx (type_zcq with subtype_yit), xwequr (type_iyy with subtype_prb), bgjo (type_khz with subtype_mst), adm (type_pgd with subtype_uca) to produce variable cmbb (type_khz with subtype_tsy)",
+      "inputs": [
+        "ytmrx",
+        "xwequr",
+        "bgjo",
+        "adm"
+      ],
+      "name": "func_rgy",
+      "node_type": "core",
+      "output": "cmbb"
+    },
+    {
+      "description": "Processes variable qrpr (type_gjr with subtype_usb) to produce variable hlxevp (type_iyy with subtype_prb)",
+      "inputs": [
+        "qrpr"
+      ],
+      "name": "func_sje",
+      "node_type": "core",
+      "output": "hlxevp"
+    },
+    {
+      "description": "Processes variable jcjiy (type_khz with subtype_pyf) to produce variable ouqnrz (type_khz with subtype_mst)",
+      "inputs": [
+        "jcjiy"
+      ],
+      "name": "func_lnj",
+      "node_type": "core",
+      "output": "ouqnrz"
+    },
+    {
+      "description": "Processes variable rmpqe (type_zcq with subtype_jcy) to produce variable bag (type_pgd with subtype_uca)",
+      "inputs": [
+        "rmpqe"
+      ],
+      "name": "func_qwu",
+      "node_type": "core",
+      "output": "bag"
+    }
+  ],
+  "graph_seed": 100,
+  "initial_values": {
+    "jcjiy": 902,
+    "qrpr": 823,
+    "rmpqe": 676,
+    "wart": 806
+  },
+  "input_variables": [
+    "jcjiy",
+    "qrpr",
+    "rmpqe",
+    "wart"
+  ],
+  "minimum_calls": 5,
+  "target_function": "func_rgy",
+  "target_variable": "cmbb",
+  "task_id": "easy_depth-seed100",
+  "tool_schemas": [
+    {
+      "function": {
+        "description": "Processes variable jcjiy (type_khz with subtype_pyf) to produce variable ouqnrz (type_khz with subtype_mst)",
+        "name": "func_lnj",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "jcjiy": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "jcjiy"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables ytmrx (type_zcq with subtype_yit), xwequr (type_iyy with subtype_prb), bgjo (type_khz with subtype_mst), adm (type_pgd with subtype_uca) to produce variable cmbb (type_khz with subtype_tsy)",
+        "name": "func_rgy",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "adm": {
+              "type": "integer"
+            },
+            "bgjo": {
+              "type": "integer"
+            },
+            "xwequr": {
+              "type": "integer"
+            },
+            "ytmrx": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ytmrx",
+            "xwequr",
+            "bgjo",
+            "adm"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable qrpr (type_gjr with subtype_usb) to produce variable hlxevp (type_iyy with subtype_prb)",
+        "name": "func_sje",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "qrpr": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "qrpr"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable rmpqe (type_zcq with subtype_jcy) to produce variable bag (type_pgd with subtype_uca)",
+        "name": "func_qwu",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "rmpqe": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "rmpqe"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable wart (type_zcq with subtype_lgg) to produce variable vuub (type_zcq with subtype_yit)",
+        "name": "func_ftw",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "wart": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "wart"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    }
+  ],
+  "trial_seed": 27117392,
+  "variable_types": {
+    "adm": "type_pgd with subtype_uca",
+    "bag": "type_pgd with subtype_uca",
+    "bgjo": "type_khz with subtype_mst",
+    "cmbb": "type_khz with subtype_tsy",
+    "hlxevp": "type_iyy with subtype_prb",
+    "jcjiy": "type_khz with subtype_pyf",
+    "ouqnrz": "type_khz with subtype_mst",
+    "qrpr": "type_gjr with subtype_usb",
+    "rmpqe": "type_zcq with subtype_jcy",
+    "vuub": "type_zcq with subtype_yit",
+    "wart": "type_zcq with subtype_lgg",
+    "xwequr": "type_iyy with subtype_prb",
+    "ytmrx": "type_zcq with subtype_yit"
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "all_values": {
+    "bijj": 673,
+    "bwi": 188,
+    "cob": 843,
+    "dlqga": 804,
+    "fpido": 972,
+    "grp": 188,
+    "kpo": 673,
+    "ljkep": 843,
+    "lxc": 875,
+    "ozpheq": 485,
+    "pwzwni": 157,
+    "sndqw": 875,
+    "twjg": 67
+  },
+  "call_budget": 10,
+  "config_id": "easy_depth",
+  "edges": [
+    [
+      "func_soe",
+      "func_mvo"
+    ],
+    [
+      "func_kqz",
+      "func_mvo"
+    ],
+    [
+      "func_obw",
+      "func_mvo"
+    ],
+    [
+      "func_yqx",
+      "func_mvo"
+    ]
+  ],
+  "functions": [
+    {
+      "description": "Processes variable twjg (type_lxt with subtype_xsp) to produce variable bijj (type_dnp with subtype_nzk)",
+      "inputs": [
+        "twjg"
+      ],
+      "name": "func_soe",
+      "node_type": "core",
+      "output": "bijj"
+    },
+    {
+      "description": "Processes variables kpo (type_dnp with subtype_nzk), ljkep (type_dnp with subtype_dap), sndqw (type_dvz with subtype_hwd), grp (type_qjf with subtype_tmb) to produce variable pwzwni (type_qjf with subtype_sup)",
+      "inputs": [
+        "kpo",
+        "ljkep",
+        "sndqw",
+        "grp"
+      ],
+      "name": "func_mvo",
+      "node_type": "core",
+      "output": "pwzwni"
+    },
+    {
+      "description": "Processes variable dlqga (type_qjf with subtype_apx) to produce variable cob (type_dnp with subtype_dap)",
+      "inputs": [
+        "dlqga"
+      ],
+      "name": "func_kqz",
+      "node_type": "core",
+      "output": "cob"
+    },
+    {
+      "description": "Processes variable fpido (type_sri with subtype_sbj) to produce variable lxc (type_dvz with subtype_hwd)",
+      "inputs": [
+        "fpido"
+      ],
+      "name": "func_obw",
+      "node_type": "core",
+      "output": "lxc"
+    },
+    {
+      "description": "Processes variable ozpheq (type_qjf with subtype_edp) to produce variable bwi (type_qjf with subtype_tmb)",
+      "inputs": [
+        "ozpheq"
+      ],
+      "name": "func_yqx",
+      "node_type": "core",
+      "output": "bwi"
+    }
+  ],
+  "graph_seed": 400,
+  "initial_values": {
+    "dlqga": 804,
+    "fpido": 972,
+    "ozpheq": 485,
+    "twjg": 67
+  },
+  "input_variables": [
+    "dlqga",
+    "fpido",
+    "ozpheq",
+    "twjg"
+  ],
+  "minimum_calls": 5,
+  "target_function": "func_mvo",
+  "target_variable": "pwzwni",
+  "task_id": "easy_depth-seed400",
+  "tool_schemas": [
+    {
+      "function": {
+        "description": "Processes variable fpido (type_sri with subtype_sbj) to produce variable lxc (type_dvz with subtype_hwd)",
+        "name": "func_obw",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "fpido": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fpido"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables kpo (type_dnp with subtype_nzk), ljkep (type_dnp with subtype_dap), sndqw (type_dvz with subtype_hwd), grp (type_qjf with subtype_tmb) to produce variable pwzwni (type_qjf with subtype_sup)",
+        "name": "func_mvo",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "grp": {
+              "type": "integer"
+            },
+            "kpo": {
+              "type": "integer"
+            },
+            "ljkep": {
+              "type": "integer"
+            },
+            "sndqw": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "kpo",
+            "ljkep",
+            "sndqw",
+            "grp"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable dlqga (type_qjf with subtype_apx) to produce variable cob (type_dnp with subtype_dap)",
+        "name": "func_kqz",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "dlqga": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "dlqga"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable ozpheq (type_qjf with subtype_edp) to produce variable bwi (type_qjf with subtype_tmb)",
+        "name": "func_yqx",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "ozpheq": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ozpheq"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable twjg (type_lxt with subtype_xsp) to produce variable bijj (type_dnp with subtype_nzk)",
+        "name": "func_soe",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "twjg": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "twjg"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    }
+  ],
+  "trial_seed": 29870192,
+  "variable_types": {
+    "bijj": "type_dnp with subtype_nzk",
+    "bwi": "type_qjf with subtype_tmb",
+    "cob": "type_dnp with subtype_dap",
+    "dlqga": "type_qjf with subtype_apx",
+    "fpido": "type_sri with subtype_sbj",
+    "grp": "type_qjf with subtype_tmb",
+    "kpo": "type_dnp with subtype_nzk",
+    "ljkep": "type_dnp with subtype_dap",
+    "lxc": "type_dvz with subtype_hwd",
+    "ozpheq": "type_qjf with subtype_edp",
+    "pwzwni": "type_qjf with subtype_sup",
+    "sndqw": "type_dvz with subtype_hwd",
+    "twjg": "type_lxt with subtype_xsp"
+  }
+}

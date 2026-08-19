@@ -1,0 +1,16 @@
+config_id,strategy,success_rate,successes,trials,avg_prompt_tokens,avg_calls,avg_state_bytes
+connected_distractors,dependency_pruning,1.0,5,5,12536.2,5.4,349.2
+connected_distractors,full_history,0.6,3,5,11106.8,4.8,0.0
+connected_distractors,json_state,1.0,5,5,12965.6,5.6,349.2
+connected_distractors,live_dependency_pruning,0.6,3,5,9568.6,4.0,77.8
+connected_distractors,paper_restatement,0.6,3,5,10707.8,4.4,803.4
+deep_depth,dependency_pruning,1.0,5,5,6639.0,5.2,344.4
+deep_depth,full_history,1.0,5,5,6008.2,5.0,0.0
+deep_depth,json_state,1.0,5,5,6639.0,5.2,344.4
+deep_depth,live_dependency_pruning,1.0,5,5,6118.0,5.0,111.8
+deep_depth,paper_restatement,1.0,5,5,7135.4,5.2,1074.4
+easy_depth,dependency_pruning,1.0,5,5,7055.6,5.0,520.4
+easy_depth,full_history,0.8,4,5,5431.4,4.2,0.0
+easy_depth,json_state,1.0,5,5,7055.6,5.0,520.4
+easy_depth,live_dependency_pruning,1.0,5,5,6766.8,5.0,281.0
+easy_depth,paper_restatement,1.0,5,5,8048.8,5.0,1805.4

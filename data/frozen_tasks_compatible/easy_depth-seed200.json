@@ -1,0 +1,234 @@
+{
+  "all_values": {
+    "atfme": 937,
+    "bsif": 702,
+    "dvxg": 395,
+    "dznq": 56,
+    "emd": 215,
+    "ftt": 494,
+    "iyvpjq": 702,
+    "jghyzp": 973,
+    "lir": 326,
+    "pqryy": 326,
+    "ratr": 717,
+    "ryusl": 937,
+    "wcgwbc": 215
+  },
+  "call_budget": 10,
+  "config_id": "easy_depth",
+  "edges": [
+    [
+      "func_pxw",
+      "func_yhf"
+    ],
+    [
+      "func_yum",
+      "func_yhf"
+    ],
+    [
+      "func_loj",
+      "func_yhf"
+    ],
+    [
+      "func_cyj",
+      "func_yhf"
+    ]
+  ],
+  "functions": [
+    {
+      "description": "Processes variable dznq (type_wjq with subtype_ceh) to produce variable ryusl (type_wjq with subtype_htg)",
+      "inputs": [
+        "dznq"
+      ],
+      "name": "func_pxw",
+      "node_type": "core",
+      "output": "ryusl"
+    },
+    {
+      "description": "Processes variables atfme (type_wjq with subtype_htg), iyvpjq (type_kub with subtype_vqc), emd (type_kub with subtype_wmd), pqryy (type_tmd with subtype_ehl) to produce variable dvxg (type_koi with subtype_eoa)",
+      "inputs": [
+        "atfme",
+        "iyvpjq",
+        "emd",
+        "pqryy"
+      ],
+      "name": "func_yhf",
+      "node_type": "core",
+      "output": "dvxg"
+    },
+    {
+      "description": "Processes variable ftt (type_koi with subtype_hve) to produce variable bsif (type_kub with subtype_vqc)",
+      "inputs": [
+        "ftt"
+      ],
+      "name": "func_yum",
+      "node_type": "core",
+      "output": "bsif"
+    },
+    {
+      "description": "Processes variable ratr (type_koi with subtype_dkh) to produce variable wcgwbc (type_kub with subtype_wmd)",
+      "inputs": [
+        "ratr"
+      ],
+      "name": "func_loj",
+      "node_type": "core",
+      "output": "wcgwbc"
+    },
+    {
+      "description": "Processes variable jghyzp (type_kub with subtype_bqc) to produce variable lir (type_tmd with subtype_ehl)",
+      "inputs": [
+        "jghyzp"
+      ],
+      "name": "func_cyj",
+      "node_type": "core",
+      "output": "lir"
+    }
+  ],
+  "graph_seed": 200,
+  "initial_values": {
+    "dznq": 56,
+    "ftt": 494,
+    "jghyzp": 973,
+    "ratr": 717
+  },
+  "input_variables": [
+    "dznq",
+    "ftt",
+    "jghyzp",
+    "ratr"
+  ],
+  "minimum_calls": 5,
+  "target_function": "func_yhf",
+  "target_variable": "dvxg",
+  "task_id": "easy_depth-seed200",
+  "tool_schemas": [
+    {
+      "function": {
+        "description": "Processes variable ratr (type_koi with subtype_dkh) to produce variable wcgwbc (type_kub with subtype_wmd)",
+        "name": "func_loj",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "ratr": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ratr"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variables atfme (type_wjq with subtype_htg), iyvpjq (type_kub with subtype_vqc), emd (type_kub with subtype_wmd), pqryy (type_tmd with subtype_ehl) to produce variable dvxg (type_koi with subtype_eoa)",
+        "name": "func_yhf",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "atfme": {
+              "type": "integer"
+            },
+            "emd": {
+              "type": "integer"
+            },
+            "iyvpjq": {
+              "type": "integer"
+            },
+            "pqryy": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "atfme",
+            "iyvpjq",
+            "emd",
+            "pqryy"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable ftt (type_koi with subtype_hve) to produce variable bsif (type_kub with subtype_vqc)",
+        "name": "func_yum",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "ftt": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ftt"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable jghyzp (type_kub with subtype_bqc) to produce variable lir (type_tmd with subtype_ehl)",
+        "name": "func_cyj",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "jghyzp": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "jghyzp"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Processes variable dznq (type_wjq with subtype_ceh) to produce variable ryusl (type_wjq with subtype_htg)",
+        "name": "func_pxw",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "dznq": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "dznq"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "function"
+    }
+  ],
+  "trial_seed": 28034992,
+  "variable_types": {
+    "atfme": "type_wjq with subtype_htg",
+    "bsif": "type_kub with subtype_vqc",
+    "dvxg": "type_koi with subtype_eoa",
+    "dznq": "type_wjq with subtype_ceh",
+    "emd": "type_kub with subtype_wmd",
+    "ftt": "type_koi with subtype_hve",
+    "iyvpjq": "type_kub with subtype_vqc",
+    "jghyzp": "type_kub with subtype_bqc",
+    "lir": "type_tmd with subtype_ehl",
+    "pqryy": "type_tmd with subtype_ehl",
+    "ratr": "type_koi with subtype_dkh",
+    "ryusl": "type_wjq with subtype_htg",
+    "wcgwbc": "type_kub with subtype_wmd"
+  }
+}
